@@ -1,24 +1,11 @@
 {
     "version": "0.2.0",
-    // "configurations": [
-    //     {
-    //         "name": "Python:FastAPI:Local",
-    //         "type": "python",
-    //         "request": "launch",
-    //         "module": "uvicorn",
-    //         "env": {
-    //             "APP_ENV": "${input:server_env2}",
-    //             "DATABASE_URI": "mysql+aiomysql://root:wjdwhdans@localhost:4300/rencar"
-    //         },
-    //         "args": ["app.main:app", "--reload", "--port=8002"]
-    //     }
-    // ],
     "configurations": [
         {
             "name": "Python:Video",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/video-to-black.py",
+            "program": "${workspaceFolder}/video/video-to-black.py",
             "args": ["${input:file_path}"],
             "console": "integratedTerminal"
         }
@@ -29,6 +16,7 @@
             "type": "pickString",
             "default": "local",
             "description": "경로를 입력해주세요.",
+            "options":["${workspaceFolder}/video/temp_folder/IMG_7772.MOV", "${workspaceFolder}/video/temp_folder/IMG_7773.MOV"]
         }
     ],
 }
