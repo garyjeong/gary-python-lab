@@ -11,7 +11,7 @@ def deep_first_search(
     end: str,
     path: list | None = None,
     visited: bool | None = None,
-):
+) -> list | None:
     if not visited or not isinstance(visited, set):
         visited = set()
 
@@ -31,6 +31,7 @@ def deep_first_search(
             )
             if result is not None:
                 return result
+    return None
 
 
 graph: list = {
